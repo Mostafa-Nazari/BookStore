@@ -5,9 +5,9 @@ namespace BookStore.DataAccess.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly DatabaseContext _db;
+        private readonly AppDatabaseContext _db;
         internal DbSet<T> dbset;
-        public Repository(DatabaseContext db)
+        public Repository(AppDatabaseContext db)
         {
             _db = db;
             _db.Products.Include(u => u.Category).Include(u => u.CoverType);

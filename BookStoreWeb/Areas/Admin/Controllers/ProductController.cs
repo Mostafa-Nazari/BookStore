@@ -58,7 +58,7 @@ namespace BookStoreWeb.Areas.Admin.Controllers
                     string ImageExtention = Path.GetExtension(file.FileName);
                     if (obj.Product.ImageURL is not null)
                     {
-                        string oldImagePath = Path.Combine(WWWroot, obj.Product.ImageURL.TrimStart('\\'));
+                        string oldImagePath = Path.Combine(ProductsImagesRoot, obj.Product.ImageURL.TrimStart('\\'));
                         if (System.IO.File.Exists(oldImagePath))
                         {
                             System.IO.File.Delete(oldImagePath);
@@ -68,7 +68,7 @@ namespace BookStoreWeb.Areas.Admin.Controllers
                     {
                         file.CopyTo(ImageStream);
                     }
-                    obj.Product.ImageURL = @"Images\Products\" + UID + ImageExtention;
+                    obj.Product.ImageURL = UID + ImageExtention;
                 }
                 if (obj.Product.Id is 0)
                 {

@@ -6,8 +6,8 @@ namespace BookStore.DataAccess.Repository.ModelRepository
 {
     public class ProductRepository : Repository<Product>, IProductRepository
     {
-        private readonly DatabaseContext _db;
-        public ProductRepository(DatabaseContext db) : base(db)
+        private readonly AppDatabaseContext _db;
+        public ProductRepository(AppDatabaseContext db) : base(db)
         {
             _db = db;
         }

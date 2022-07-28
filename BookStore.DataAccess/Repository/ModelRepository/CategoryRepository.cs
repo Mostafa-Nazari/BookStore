@@ -5,8 +5,8 @@ namespace BookStore.DataAccess.Repository.ModelRepository
 {
     public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
-        private readonly DatabaseContext _db;
-        public CategoryRepository(DatabaseContext db):base(db)
+        private readonly AppDatabaseContext _db;
+        public CategoryRepository(AppDatabaseContext db):base(db)
         {
             _db = db;
         }

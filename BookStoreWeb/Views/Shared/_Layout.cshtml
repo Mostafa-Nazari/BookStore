@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BulkyBookWeb</title>
-    <link rel="stylesheet" href="~/css/SlateTheme.css" />
+    <link rel="stylesheet" href="~/css/Theme.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BulkyBookWeb.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
@@ -28,17 +28,17 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Management</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item nav-link" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
-                                <a class="dropdown-item nav-link" asp-area="Admin" asp-controller="CoverType" asp-action="Index">CoverType</a>
-                                <a class="dropdown-item nav-link" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
-
+                                <a class="dropdown-item nav-link" style="color:black" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                                <a class="dropdown-item nav-link" style="color:black" asp-area="Admin" asp-controller="CoverType" asp-action="Index">CoverType</a>
+                                <a class="dropdown-item nav-link" style="color:black" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
                             </div>
                         </li>
                     </ul>
-                    <form class="d-flex">
+                    <partial name="_LoginPartial" />
+                   @* <form class="d-flex">
                         <input class="form-control me-sm-2" type="text" placeholder="Search">
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                    </form>*@
                 </div>
             </div>
         </nav>

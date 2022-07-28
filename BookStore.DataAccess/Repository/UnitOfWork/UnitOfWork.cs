@@ -5,8 +5,8 @@ namespace BookStore.DataAccess.Repository.UnitOfWork
 {
     public class UnitOfWork:IUnitOfWork
     {
-        private readonly DatabaseContext _db;
-        public UnitOfWork(DatabaseContext db) 
+        private readonly AppDatabaseContext _db;
+        public UnitOfWork(AppDatabaseContext db) 
         {
             _db = db;
             Category = new CategoryRepository(_db);

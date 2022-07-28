@@ -1,11 +1,12 @@
 ﻿using BookStore.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace BookStore.DataAccess
 {
-    public class DatabaseContext : DbContext
+    public class AppDatabaseContext : DbContext
     {
-        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
+        public AppDatabaseContext(DbContextOptions<AppDatabaseContext> options) : base(options)
         {
 
         }
@@ -13,6 +14,5 @@ namespace BookStore.DataAccess
         
         public DbSet<CoverType> CoverTypes { get; set; }
         public DbSet<Product> Products { get; set; }
-
     }
 }

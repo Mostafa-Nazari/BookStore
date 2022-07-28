@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookStore.DataAccess.Migrations
 {
-    [DbContext(typeof(DatabaseContext))]
+    [DbContext(typeof(AppDatabaseContext))]
     [Migration("20220712174041_AddCategoryModel")]
     partial class AddCategoryModel
     {

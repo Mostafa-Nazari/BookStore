@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookStore.DataAccess.Migrations
 {
-    [DbContext(typeof(DatabaseContext))]
+    [DbContext(typeof(AppDatabaseContext))]
     [Migration("20220716132305_AddProductModedlToDatabase")]
     partial class AddProductModedlToDatabase
     {
